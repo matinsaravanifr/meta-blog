@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import axios from "axios";
+import Spinner from "../Spinner/Spinner";
 export default function Articles() {
   const[Data,setData]=useState([])
+  const [isloadind,setisloading]=useState(true)
   useEffect(() => {
       const fetchData = async () => {
         try {
-          
         const res = await axios.get('/api/information/api/v1/all-news/');
         setData(res.data.results)
+        setisloading(false)
       } catch (error) {
         console.error(error);
+        setisloading(true)
       }
     };
 
@@ -18,8 +21,10 @@ export default function Articles() {
   }, []); 
    return (
     <main className="w-[80%] m-auto mb-10">
+      {
+        isloadind ? <Spinner/>:
       <section
-        className="        
+      className="        
         grid 
         grid-cols-1    
         sm:grid-cols-2 
@@ -42,6 +47,7 @@ export default function Articles() {
           ))
         }
       </section>
+        }
     </main>
   );
 }
