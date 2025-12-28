@@ -2,7 +2,7 @@ import logo from "./../../assets/Logo.svg";
 import { FaSistrix } from "react-icons/fa6";
 function Header() {
   return (
-    <header className="w-[80%] h-[100px] m-auto  flex items-center justify-between ">
+    <header className="hidden lg:w-[80%] lg:h-[100px] lg:m-auto  lg:flex lg:items-center lg:justify-between  ">
       <img className="w-50" src={logo} alt="logo" />
       <nav className="">
         <ul className="flex items-center justify-center w-full">
