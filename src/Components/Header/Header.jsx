@@ -1,24 +1,22 @@
 import logo from "./../../assets/Logo.svg";
 import { FaSistrix } from "react-icons/fa6";
+import Mobil_Ui from "./Mobil_Ui";
 function Header() {
-  return (
+  return (<>
     <header className="hidden lg:w-[80%] lg:h-[100px] lg:m-auto  lg:flex lg:items-center lg:justify-between  ">
       <img className="w-50" src={logo} alt="logo" />
       <nav className="">
         <ul className="flex items-center justify-center w-full">
-          <li className="m-5 hover:border-b-2 p-2">
+          <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
             <a href="#">Home</a>
           </li>
-          <li className="m-5 hover:border-b-2 p-2">
+          <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
             <a href="#">Blog</a>
           </li>
-          <li className="m-5 hover:border-b-2 p-2">
-            <a href="#">single blog</a>
+          <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
+            <a href="#">About Us</a>
           </li>
-          <li className="m-5 hover:border-b-2 p-2">
-            <a href="#">Pages</a>
-          </li>
-          <li className="m-5 hover:border-b-2 p-2">
+          <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
             <a href="#">Contact</a>
           </li>
         </ul>
@@ -32,7 +30,7 @@ function Header() {
             className="w-35 h-7 pl-1.5 bg-gray-300 items-center border-gray-300 rounded-[4px] outline-none "
             placeholder="search"
             type="text"
-          />
+            />
         </span>
         <button
           id="toggleTheme"
@@ -45,6 +43,8 @@ function Header() {
         </button>
       </div>
     </header>
+    <Mobil_Ui/>
+          </>
   );
 }
 
