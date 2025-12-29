@@ -6,11 +6,10 @@ import Article_page from '../Article_page/Article_page'
 export default function Home() {
   return (
     <>
-  {/* <Header/>
+  <Header/>
   <HeroSection/>
   <Articles/>
-  <Footer/> */}
-  <Article_page/>
+  <Footer/>
     </>
   )
 }
