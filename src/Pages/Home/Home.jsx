@@ -4,6 +4,7 @@ import Articles from './../../Components/Articles/Articles'
 import Footer from './../../Components/Footer/Footer'
 import Article_page from '../Article_page/Article_page'
 import About_Us from '../About_Us/About_Us'
+import Contact from '../Contact/Contact'
 export default function Home() {
   return (
     <>
