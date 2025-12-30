@@ -7,11 +7,10 @@ import About_Us from '../About_Us/About_Us'
 export default function Home() {
   return (
     <>
-  {/* <Header/>
+  <Header/>
   <HeroSection/>
   <Articles/>
-  <Footer/> */}
-  <About_Us/>
+  <Footer/>
     </>
   )
 }

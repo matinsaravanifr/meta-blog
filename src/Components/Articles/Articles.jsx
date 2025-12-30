@@ -9,7 +9,7 @@ export default function Articles() {
       const fetchData = async () => {
         try {
         const res = await axios.get('/api/information/api/v1/all-news/');
-        setData(res.data.results)
+        setData(res.data.results)        
         setisloading(false)
       } catch (error) {
         console.error(error);
@@ -43,6 +43,7 @@ export default function Articles() {
             author_title={item.author_title}
             tarikh={item.created_at}
             image={item.cover_image}
+            content={item.content}
             />
           ))
         }
