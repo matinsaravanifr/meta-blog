@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Card from "../Card/Card";
 import axios from "axios";
 import Spinner from "../Spinner/Spinner";
@@ -37,6 +38,9 @@ export default function Articles() {
       >
         {
           Data.map((item)=>(
+            <Link
+            key={item.id}
+            to={`/blog/${item.id}`}            >
             <Card
             key={item.id}
             title={item.title}
@@ -45,6 +49,7 @@ export default function Articles() {
             image={item.cover_image}
             content={item.content}
             />
+            </Link>
           ))
         }
       </section>

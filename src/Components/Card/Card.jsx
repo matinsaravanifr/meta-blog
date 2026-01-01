@@ -1,19 +1,18 @@
 import omg from './../../assets/image.png'
 export default function Card({id,title,author_title,tarikh,image,content}) {
-    const newDate=new Date(tarikh)
-    const calc_num_words=(text)=>{
-      const result=(text.trim().split(/\s+/).length)/200
-      if(result<1){
-        return "کمتر از یک دقیقه"
-      }
-      else{
-        return `${Math.ceil(result)}دقیقه`
-      }
+  const calc_num_words=(text)=>{
+    const result=(text.trim().split(/\s+/).length)/200
+    if(result<1){
+      return "کمتر از یک دقیقه"
     }
-    const formatDate=newDate.toLocaleDateString("fa-IR")
+    else{
+      return `${Math.ceil(result)}دقیقه`
+    }
+  }
+  const newDate=new Date(tarikh)
+  const formatDate=newDate.toLocaleDateString("fa-IR")
   return (
     <div className="w-[95%] h-[500px] border-[1px] border-gray-300 rounded-2xl  ">
-      <a className="h-full " href="">
         <div className="w-[90%] h-full  m-auto flex flex-col">
           <div>
           <img className=" m-auto mt-3 w-full h-[300px] bg-cover"  src={omg} alt="image_title" />
@@ -36,7 +35,6 @@ export default function Card({id,title,author_title,tarikh,image,content}) {
           </div>
           <h2 className='text-right text-[16px] text-gray-400 pb-3'>زمان مطالعه:{calc_num_words(content)}</h2>
         </div>
-      </a>
     </div>
   );
 }
