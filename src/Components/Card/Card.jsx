@@ -15,7 +15,7 @@ export default function Card({id,title,author_title,tarikh,image,content}) {
     <div className="w-[95%] h-[500px] border-[1px] border-gray-300 rounded-2xl  ">
         <div className="w-[90%] h-full  m-auto flex flex-col">
           <div>
-          <img className=" m-auto mt-3 w-full h-[300px] bg-cover"  src={omg} alt="image_title" />
+          <img className=" m-auto mt-3 w-full h-[300px] object-cover"  src={omg} alt="image_title" />
           <span className=" bg-blue-100 p-2 inline-block rounded text-white w-[150px] mt-4 mb-4">
             <h1 className="text-sm font-medium text-[#4B6BFB] text-center ">Technology</h1>
           </span>

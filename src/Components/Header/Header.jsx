@@ -1,6 +1,7 @@
 import logo from "./../../assets/Logo.svg";
 import { FaSistrix } from "react-icons/fa6";
 import Mobil_Ui from "./Mobil_Ui";
+import { Link } from "react-router-dom";
 function Header() {
   return (<>
     <header className="hidden lg:w-[80%] lg:h-[100px] lg:m-auto  lg:flex lg:items-center lg:justify-between  ">
@@ -8,16 +9,16 @@ function Header() {
       <nav className="">
         <ul className="flex items-center justify-center w-full">
           <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
-            <a href="#">Blog</a>
+            <Link href="#">Blog</Link>
           </li>
           <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
-            <a href="#">About Us</a>
+            <Link to="/about">About Us</Link>
           </li>
           <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
-            <a href="#">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
