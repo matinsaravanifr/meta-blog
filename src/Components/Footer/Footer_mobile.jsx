@@ -8,7 +8,9 @@ export default function Footer_mobile() {
         </div>
         <ul className="flex items-center justify-center w-full">
           <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
-            <a href="#">Home</a>
+            <a href="#">Home
+              
+            </a>
           </li>
           <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
             <a href="#">Blog</a>
@@ -17,6 +19,8 @@ export default function Footer_mobile() {
             <a href="#">About Us</a>
           </li>
           <li className="m-5 hover:border-b-2 p-2 cursor-pointer">
+
+            
             <a href="#">Contact</a>
           </li>
         </ul>

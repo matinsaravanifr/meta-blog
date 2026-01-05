@@ -10,7 +10,9 @@ export default function Articles() {
       const fetchData = async () => {
         try {
         const res = await axios.get('/api/information/api/v1/all-news/');
-        setData(res.data.results)        
+        setData(res.data.results)
+        console.log(res.data.results);
+                
         setisloading(false)
       } catch (error) {
         console.error(error);

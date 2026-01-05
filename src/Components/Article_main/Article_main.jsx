@@ -12,13 +12,8 @@ export default function Article_main() {
     const fetchData = async () => {
       try {
         const res = await axios.get(`/api/information/api/v1/news-detail/${id}/`);
-        console.log(res.data.title);
         setisloading(false)
         setdata(res.data)
-        
-        
-        
-        
       } catch (error) {
         console.error('❌ خطا در دریافت داده:', error);
       }
